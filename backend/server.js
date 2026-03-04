@@ -1,6 +1,13 @@
 const express = require("express"); // ça fera appel à express ,on va pouvoir accéder à 
 //toutes les méthodes qui adossées  à cette librairie.
+const connectDB = require("./config/db");
+const dotenv = require("dotenv").config();
 const port = 5000;
+
+// connexion a la BD
+connectDB();
+
+
 const app = express(); // ceci dit des que je dirais app.get ou app.use ou app.listen , ça ira dans l app express qu on installé 
 
 // donc, comment est ce qu on s y prend ?
